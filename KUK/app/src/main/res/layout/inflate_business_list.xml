@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_business_list"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="1dp">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/bs_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/bs_Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/bs_Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/bs_Phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:autoLink="phone"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/bs_ContactEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:autoLink="email"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/bs_PostedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PostedBy"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/mdtp_red"/>
+
+</LinearLayout>

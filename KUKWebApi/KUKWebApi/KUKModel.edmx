@@ -1,0 +1,1501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="KUKModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar" MaxLength="256" />
+          <Property Name="SecurityStamp" Type="nvarchar" MaxLength="256" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="256" />
+          <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="RollNo" Type="int" />
+          <Property Name="JoiningYear" Type="date" Nullable="false" />
+          <Property Name="LeavingYear" Type="date" Nullable="false" />
+          <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Posting" Type="nvarchar" MaxLength="50" />
+          <Property Name="BloodGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="Latitude" Type="decimal" Precision="9" Scale="6" />
+          <Property Name="Longitude" Type="decimal" Precision="9" Scale="6" />
+          <Property Name="House" Type="nvarchar" MaxLength="50" />
+          <Property Name="Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocationTime" Type="datetime" />
+          <Property Name="School" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneVisible" Type="bit" Nullable="false" />
+          <Property Name="ShowLocation" Type="bit" Nullable="false" />
+          <Property Name="Profession" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProfileLink" Type="text" />
+        </EntityType>
+        <EntityType Name="AspNetUsersRegistring">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="256" />
+          <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="RollNo" Type="int" Nullable="false" />
+          <Property Name="JoiningYear" Type="date" Nullable="false" />
+          <Property Name="LeavingYear" Type="date" Nullable="false" />
+          <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Posting" Type="nvarchar" MaxLength="50" />
+          <Property Name="BloodGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="House" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="School" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ConfirmPassword" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" Nullable="false" />
+          <Property Name="ProfileLink" Type="text" />
+        </EntityType>
+        <EntityType Name="tbl_Alerts">
+          <Key>
+            <PropertyRef Name="col_AlertID" />
+          </Key>
+          <Property Name="col_AlertID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_Alert" Type="text" Nullable="false" />
+          <Property Name="col_AlertDateTime" Type="datetime" Nullable="false" />
+          <Property Name="col_Read" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_BackGroundCheck">
+          <Key>
+            <PropertyRef Name="col_BackgroundCheckID" />
+          </Key>
+          <Property Name="col_BackgroundCheckID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_Comments" Type="text" />
+          <Property Name="col_OverAllRating" Type="smallint" />
+          <Property Name="col_UserID" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="tbl_BusinessDirectory">
+          <Key>
+            <PropertyRef Name="col_BusinessID" />
+          </Key>
+          <Property Name="col_BusinessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_BusinessName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="col_BusinessCategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="col_BusinessAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="col_BusinessDescription" Type="nvarchar" MaxLength="255" />
+          <Property Name="col_PostedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="col_BusinessContact" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="col_BusinessEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_City">
+          <Key>
+            <PropertyRef Name="col_CityID" />
+          </Key>
+          <Property Name="col_CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_CityName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="col_CityCode" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="col_StateID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_DeviceIds">
+          <Key>
+            <PropertyRef Name="col_DeviceTokenID" />
+          </Key>
+          <Property Name="col_DeviceTokenID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="col_DeviceToken" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="col_UserType" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="col_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="col_Version" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tbl_Jobs">
+          <Key>
+            <PropertyRef Name="col_JobID" />
+          </Key>
+          <Property Name="col_JobID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_JobTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="col_JobDescription" Type="text" Nullable="false" />
+          <Property Name="col_PostDateTime" Type="date" Nullable="false" />
+          <Property Name="col_Expired" Type="bit" Nullable="false" />
+          <Property Name="col_Category" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="col_ContactNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="col_ContactEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="col_PostedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Log">
+          <Key>
+            <PropertyRef Name="col_LogID" />
+          </Key>
+          <Property Name="col_LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="col_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="col_Feature" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_News">
+          <Key>
+            <PropertyRef Name="col_NewsID" />
+          </Key>
+          <Property Name="col_NewsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_News" Type="text" Nullable="false" />
+          <Property Name="col_NewsDateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_PartyStatus">
+          <Key>
+            <PropertyRef Name="col_PartyStatusID" />
+          </Key>
+          <Property Name="col_PartyStatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_IsAvailable" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="col_Date" Type="date" Nullable="false" />
+          <Property Name="col_UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Photo">
+          <Key>
+            <PropertyRef Name="col_PhotoID" />
+          </Key>
+          <Property Name="col_PhotoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_Photo" Type="image" Nullable="false" />
+          <Property Name="col_UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="col_BigPhoto" Type="image" />
+        </EntityType>
+        <EntityType Name="tbl_Profession">
+          <Key>
+            <PropertyRef Name="col_ProfessionID" />
+          </Key>
+          <Property Name="col_ProfessionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_Profession" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Purchase">
+          <Key>
+            <PropertyRef Name="col_PurchaseID" />
+          </Key>
+          <Property Name="col_PurchaseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="col_PurchaseStatus" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Rating">
+          <Key>
+            <PropertyRef Name="col_RatingID" />
+          </Key>
+          <Property Name="col_RatingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="col_Rating" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Requirements">
+          <Key>
+            <PropertyRef Name="col_RequirementID" />
+          </Key>
+          <Property Name="col_RequirementID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_RequirementCategory" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="col_RequirementDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="col_RequirementContact" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="col_RequirementEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="col_PostedBy" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="col_RequirementPostedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_State">
+          <Key>
+            <PropertyRef Name="col_StateID" />
+          </Key>
+          <Property Name="col_StateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_StateName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="col_StateCode" Type="nvarchar" MaxLength="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_UserAlbum">
+          <Key>
+            <PropertyRef Name="col_UserAlbumID" />
+          </Key>
+          <Property Name="col_UserAlbumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_Photo" Type="image" Nullable="false" />
+          <Property Name="col_UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="col_BigPhoto" Type="image" />
+          <Property Name="col_Description" Type="text" />
+          <Property Name="col_PostedDateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_UserMessages">
+          <Key>
+            <PropertyRef Name="col_userMessagesID" />
+          </Key>
+          <Property Name="col_userMessagesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="col_Message" Type="text" Nullable="false" />
+          <Property Name="col_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="col_ParentMessageID" Type="int" />
+          <Property Name="col_ToUserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="col_FromUserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'KUK.dbo.tbl_Version' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tbl_Version">
+          <Key>
+            <PropertyRef Name="col_Version" />
+          </Key>
+          <Property Name="col_Version" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_BackGroundCheck_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_BackGroundCheck" Type="Self.tbl_BackGroundCheck" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_BackGroundCheck">
+              <PropertyRef Name="col_UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_BusinessDirectory_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_BusinessDirectory" Type="Self.tbl_BusinessDirectory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_BusinessDirectory">
+              <PropertyRef Name="col_PostedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_City_tbl_State">
+          <End Role="tbl_State" Type="Self.tbl_State" Multiplicity="1" />
+          <End Role="tbl_City" Type="Self.tbl_City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_State">
+              <PropertyRef Name="col_StateID" />
+            </Principal>
+            <Dependent Role="tbl_City">
+              <PropertyRef Name="col_StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_DeviceIds_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_DeviceIds" Type="Self.tbl_DeviceIds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_DeviceIds">
+              <PropertyRef Name="col_UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Jobs_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_Jobs" Type="Self.tbl_Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_Jobs">
+              <PropertyRef Name="col_PostedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_PartyStatus_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_PartyStatus" Type="Self.tbl_PartyStatus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_PartyStatus">
+              <PropertyRef Name="col_UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Photo_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_Photo" Type="Self.tbl_Photo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_Photo">
+              <PropertyRef Name="col_UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Rating_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_Rating" Type="Self.tbl_Rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_Rating">
+              <PropertyRef Name="col_UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Requirements_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_Requirements" Type="Self.tbl_Requirements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_Requirements">
+              <PropertyRef Name="col_PostedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_UserAlbum_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_UserAlbum" Type="Self.tbl_UserAlbum" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_UserAlbum">
+              <PropertyRef Name="col_UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_UserMessages_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_UserMessages" Type="Self.tbl_UserMessages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_UserMessages">
+              <PropertyRef Name="col_ToUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="KUKModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsersRegistring" EntityType="Self.AspNetUsersRegistring" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Alerts" EntityType="Self.tbl_Alerts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_BackGroundCheck" EntityType="Self.tbl_BackGroundCheck" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_BusinessDirectory" EntityType="Self.tbl_BusinessDirectory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_City" EntityType="Self.tbl_City" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_DeviceIds" EntityType="Self.tbl_DeviceIds" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Jobs" EntityType="Self.tbl_Jobs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Log" EntityType="Self.tbl_Log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_News" EntityType="Self.tbl_News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_PartyStatus" EntityType="Self.tbl_PartyStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Photo" EntityType="Self.tbl_Photo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Profession" EntityType="Self.tbl_Profession" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Purchase" EntityType="Self.tbl_Purchase" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Rating" EntityType="Self.tbl_Rating" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Requirements" EntityType="Self.tbl_Requirements" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_State" EntityType="Self.tbl_State" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_UserAlbum" EntityType="Self.tbl_UserAlbum" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_UserMessages" EntityType="Self.tbl_UserMessages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Version" EntityType="Self.tbl_Version" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tbl_Version].[col_Version] AS [col_Version]
+    FROM [dbo].[tbl_Version] AS [tbl_Version]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_BackGroundCheck_AspNetUsers" Association="Self.FK_tbl_BackGroundCheck_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="tbl_BackGroundCheck" EntitySet="tbl_BackGroundCheck" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_BusinessDirectory_AspNetUsers" Association="Self.FK_tbl_BusinessDirectory_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="tbl_BusinessDirectory" EntitySet="tbl_BusinessDirectory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_City_tbl_State" Association="Self.FK_tbl_City_tbl_State">
+            <End Role="tbl_State" EntitySet="tbl_State" />
+            <End Role="tbl_City" EntitySet="tbl_City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_DeviceIds_AspNetUsers" Association="Self.FK_tbl_DeviceIds_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="tbl_DeviceIds" EntitySet="tbl_DeviceIds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Jobs_AspNetUsers" Association="Self.FK_tbl_Jobs_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="tbl_Jobs" EntitySet="tbl_Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_PartyStatus_AspNetUsers" Association="Self.FK_tbl_PartyStatus_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="tbl_PartyStatus" EntitySet="tbl_PartyStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Photo_AspNetUsers" Association="Self.FK_tbl_Photo_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="tbl_Photo" EntitySet="tbl_Photo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Rating_AspNetUsers" Association="Self.FK_tbl_Rating_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="tbl_Rating" EntitySet="tbl_Rating" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Requirements_AspNetUsers" Association="Self.FK_tbl_Requirements_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="tbl_Requirements" EntitySet="tbl_Requirements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_UserAlbum_AspNetUsers" Association="Self.FK_tbl_UserAlbum_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="tbl_UserAlbum" EntitySet="tbl_UserAlbum" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_UserMessages_AspNetUsers" Association="Self.FK_tbl_UserMessages_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="tbl_UserMessages" EntitySet="tbl_UserMessages" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KUKModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="KUKEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="KUKModel.C__MigrationHistory" />
+          <EntitySet Name="AspNetRoles" EntityType="KUKModel.AspNetRole" />
+          <EntitySet Name="AspNetUserClaims" EntityType="KUKModel.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="KUKModel.AspNetUserLogin" />
+          <EntitySet Name="AspNetUsers" EntityType="KUKModel.AspNetUser" />
+          <EntitySet Name="AspNetUsersRegistrings" EntityType="KUKModel.AspNetUsersRegistring" />
+          <EntitySet Name="tbl_Alerts" EntityType="KUKModel.tbl_Alerts" />
+          <EntitySet Name="tbl_BackGroundCheck" EntityType="KUKModel.tbl_BackGroundCheck" />
+          <EntitySet Name="tbl_BusinessDirectory" EntityType="KUKModel.tbl_BusinessDirectory" />
+          <EntitySet Name="tbl_City" EntityType="KUKModel.tbl_City" />
+          <EntitySet Name="tbl_DeviceIds" EntityType="KUKModel.tbl_DeviceIds" />
+          <EntitySet Name="tbl_Jobs" EntityType="KUKModel.tbl_Jobs" />
+          <EntitySet Name="tbl_Log" EntityType="KUKModel.tbl_Log" />
+          <EntitySet Name="tbl_News" EntityType="KUKModel.tbl_News" />
+          <EntitySet Name="tbl_PartyStatus" EntityType="KUKModel.tbl_PartyStatus" />
+          <EntitySet Name="tbl_Photo" EntityType="KUKModel.tbl_Photo" />
+          <EntitySet Name="tbl_Profession" EntityType="KUKModel.tbl_Profession" />
+          <EntitySet Name="tbl_Rating" EntityType="KUKModel.tbl_Rating" />
+          <EntitySet Name="tbl_Requirements" EntityType="KUKModel.tbl_Requirements" />
+          <EntitySet Name="tbl_State" EntityType="KUKModel.tbl_State" />
+          <EntitySet Name="tbl_UserAlbum" EntityType="KUKModel.tbl_UserAlbum" />
+          <EntitySet Name="tbl_UserMessages" EntityType="KUKModel.tbl_UserMessages" />
+          <EntitySet Name="tbl_Version" EntityType="KUKModel.tbl_Version" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="KUKModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="KUKModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_BackGroundCheck_AspNetUsers" Association="KUKModel.FK_tbl_BackGroundCheck_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="tbl_BackGroundCheck" EntitySet="tbl_BackGroundCheck" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_BusinessDirectory_AspNetUsers" Association="KUKModel.FK_tbl_BusinessDirectory_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="tbl_BusinessDirectory" EntitySet="tbl_BusinessDirectory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_DeviceIds_AspNetUsers" Association="KUKModel.FK_tbl_DeviceIds_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="tbl_DeviceIds" EntitySet="tbl_DeviceIds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Jobs_AspNetUsers" Association="KUKModel.FK_tbl_Jobs_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="tbl_Jobs" EntitySet="tbl_Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_PartyStatus_AspNetUsers" Association="KUKModel.FK_tbl_PartyStatus_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="tbl_PartyStatus" EntitySet="tbl_PartyStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Photo_AspNetUsers" Association="KUKModel.FK_tbl_Photo_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="tbl_Photo" EntitySet="tbl_Photo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Rating_AspNetUsers" Association="KUKModel.FK_tbl_Rating_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="tbl_Rating" EntitySet="tbl_Rating" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Requirements_AspNetUsers" Association="KUKModel.FK_tbl_Requirements_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="tbl_Requirements" EntitySet="tbl_Requirements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_UserAlbum_AspNetUsers" Association="KUKModel.FK_tbl_UserAlbum_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="tbl_UserAlbum" EntitySet="tbl_UserAlbum" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_UserMessages_AspNetUsers" Association="KUKModel.FK_tbl_UserMessages_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="tbl_UserMessages" EntitySet="tbl_UserMessages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_City_tbl_State" Association="KUKModel.FK_tbl_City_tbl_State">
+            <End Role="tbl_State" EntitySet="tbl_State" />
+            <End Role="tbl_City" EntitySet="tbl_City" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="KUKModel.AspNetUserRoles">
+            <End Role="AspNetRole" EntitySet="AspNetRoles" />
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <EntitySet Name="tbl_Purchase" EntityType="KUKModel.tbl_Purchase" />
+        </EntityContainer>
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="KUKModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="KUKModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogin">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="KUKModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="RollNo" Type="Int32" />
+          <Property Name="JoiningYear" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LeavingYear" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Posting" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BloodGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Latitude" Type="Decimal" Precision="9" Scale="6" />
+          <Property Name="Longitude" Type="Decimal" Precision="9" Scale="6" />
+          <Property Name="House" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LocationTime" Type="DateTime" Precision="3" />
+          <Property Name="School" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneVisible" Type="Boolean" Nullable="false" />
+          <Property Name="ShowLocation" Type="Boolean" Nullable="false" />
+          <Property Name="Profession" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProfileLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="KUKModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="KUKModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+          <NavigationProperty Name="tbl_BackGroundCheck" Relationship="KUKModel.FK_tbl_BackGroundCheck_AspNetUsers" FromRole="AspNetUser" ToRole="tbl_BackGroundCheck" />
+          <NavigationProperty Name="tbl_BusinessDirectory" Relationship="KUKModel.FK_tbl_BusinessDirectory_AspNetUsers" FromRole="AspNetUser" ToRole="tbl_BusinessDirectory" />
+          <NavigationProperty Name="tbl_DeviceIds" Relationship="KUKModel.FK_tbl_DeviceIds_AspNetUsers" FromRole="AspNetUser" ToRole="tbl_DeviceIds" />
+          <NavigationProperty Name="tbl_Jobs" Relationship="KUKModel.FK_tbl_Jobs_AspNetUsers" FromRole="AspNetUser" ToRole="tbl_Jobs" />
+          <NavigationProperty Name="tbl_PartyStatus" Relationship="KUKModel.FK_tbl_PartyStatus_AspNetUsers" FromRole="AspNetUser" ToRole="tbl_PartyStatus" />
+          <NavigationProperty Name="tbl_Photo" Relationship="KUKModel.FK_tbl_Photo_AspNetUsers" FromRole="AspNetUser" ToRole="tbl_Photo" />
+          <NavigationProperty Name="tbl_Rating" Relationship="KUKModel.FK_tbl_Rating_AspNetUsers" FromRole="AspNetUser" ToRole="tbl_Rating" />
+          <NavigationProperty Name="tbl_Requirements" Relationship="KUKModel.FK_tbl_Requirements_AspNetUsers" FromRole="AspNetUser" ToRole="tbl_Requirements" />
+          <NavigationProperty Name="tbl_UserAlbum" Relationship="KUKModel.FK_tbl_UserAlbum_AspNetUsers" FromRole="AspNetUser" ToRole="tbl_UserAlbum" />
+          <NavigationProperty Name="tbl_UserMessages" Relationship="KUKModel.FK_tbl_UserMessages_AspNetUsers" FromRole="AspNetUser" ToRole="tbl_UserMessages" />
+          <NavigationProperty Name="AspNetRoles" Relationship="KUKModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+        </EntityType>
+        <EntityType Name="AspNetUsersRegistring">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="RollNo" Type="Int32" Nullable="false" />
+          <Property Name="JoiningYear" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LeavingYear" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Posting" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BloodGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="House" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="School" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ConfirmPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ProfileLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_Alerts">
+          <Key>
+            <PropertyRef Name="col_AlertID" />
+          </Key>
+          <Property Name="col_AlertID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_Alert" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="col_AlertDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="col_Read" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_BackGroundCheck">
+          <Key>
+            <PropertyRef Name="col_BackgroundCheckID" />
+          </Key>
+          <Property Name="col_BackgroundCheckID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="col_OverAllRating" Type="Int16" />
+          <Property Name="col_UserID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="KUKModel.FK_tbl_BackGroundCheck_AspNetUsers" FromRole="tbl_BackGroundCheck" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="tbl_BusinessDirectory">
+          <Key>
+            <PropertyRef Name="col_BusinessID" />
+          </Key>
+          <Property Name="col_BusinessID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_BusinessName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="col_BusinessCategory" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="col_BusinessAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="col_BusinessDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="col_PostedBy" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="col_BusinessContact" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="col_BusinessEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="KUKModel.FK_tbl_BusinessDirectory_AspNetUsers" FromRole="tbl_BusinessDirectory" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="tbl_City">
+          <Key>
+            <PropertyRef Name="col_CityID" />
+          </Key>
+          <Property Name="col_CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_CityName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="col_CityCode" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="col_StateID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbl_State" Relationship="KUKModel.FK_tbl_City_tbl_State" FromRole="tbl_City" ToRole="tbl_State" />
+        </EntityType>
+        <EntityType Name="tbl_DeviceIds">
+          <Key>
+            <PropertyRef Name="col_DeviceTokenID" />
+          </Key>
+          <Property Name="col_DeviceTokenID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_UserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="col_DeviceToken" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="col_UserType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="col_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="col_Version" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="KUKModel.FK_tbl_DeviceIds_AspNetUsers" FromRole="tbl_DeviceIds" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="tbl_Jobs">
+          <Key>
+            <PropertyRef Name="col_JobID" />
+          </Key>
+          <Property Name="col_JobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_JobTitle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="col_JobDescription" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="col_PostDateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="col_Expired" Type="Boolean" Nullable="false" />
+          <Property Name="col_Category" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="col_ContactNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="col_ContactEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="col_PostedBy" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="KUKModel.FK_tbl_Jobs_AspNetUsers" FromRole="tbl_Jobs" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="tbl_Log">
+          <Key>
+            <PropertyRef Name="col_LogID" />
+          </Key>
+          <Property Name="col_LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_UserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="col_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="col_Feature" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_News">
+          <Key>
+            <PropertyRef Name="col_NewsID" />
+          </Key>
+          <Property Name="col_NewsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_News" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="col_NewsDateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="tbl_PartyStatus">
+          <Key>
+            <PropertyRef Name="col_PartyStatusID" />
+          </Key>
+          <Property Name="col_PartyStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_IsAvailable" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="col_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="col_UserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="KUKModel.FK_tbl_PartyStatus_AspNetUsers" FromRole="tbl_PartyStatus" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="tbl_Photo">
+          <Key>
+            <PropertyRef Name="col_PhotoID" />
+          </Key>
+          <Property Name="col_PhotoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_Photo" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="col_UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="col_BigPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="KUKModel.FK_tbl_Photo_AspNetUsers" FromRole="tbl_Photo" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="tbl_Profession">
+          <Key>
+            <PropertyRef Name="col_ProfessionID" />
+          </Key>
+          <Property Name="col_ProfessionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_Profession" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Rating">
+          <Key>
+            <PropertyRef Name="col_RatingID" />
+          </Key>
+          <Property Name="col_RatingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_UserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="col_Rating" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="KUKModel.FK_tbl_Rating_AspNetUsers" FromRole="tbl_Rating" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="tbl_Requirements">
+          <Key>
+            <PropertyRef Name="col_RequirementID" />
+          </Key>
+          <Property Name="col_RequirementID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_RequirementCategory" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="col_RequirementDescription" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="col_RequirementContact" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="col_RequirementEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="col_PostedBy" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="col_RequirementPostedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="AspNetUser" Relationship="KUKModel.FK_tbl_Requirements_AspNetUsers" FromRole="tbl_Requirements" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="tbl_State">
+          <Key>
+            <PropertyRef Name="col_StateID" />
+          </Key>
+          <Property Name="col_StateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_StateName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="col_StateCode" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tbl_City" Relationship="KUKModel.FK_tbl_City_tbl_State" FromRole="tbl_State" ToRole="tbl_City" />
+        </EntityType>
+        <EntityType Name="tbl_UserAlbum">
+          <Key>
+            <PropertyRef Name="col_UserAlbumID" />
+          </Key>
+          <Property Name="col_UserAlbumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_Photo" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="col_UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="col_BigPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="col_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="col_PostedDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="AspNetUser" Relationship="KUKModel.FK_tbl_UserAlbum_AspNetUsers" FromRole="tbl_UserAlbum" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="tbl_UserMessages">
+          <Key>
+            <PropertyRef Name="col_userMessagesID" />
+          </Key>
+          <Property Name="col_userMessagesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_Message" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="col_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="col_ParentMessageID" Type="Int32" />
+          <Property Name="col_ToUserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="col_FromUserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="KUKModel.FK_tbl_UserMessages_AspNetUsers" FromRole="tbl_UserMessages" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="tbl_Version">
+          <Key>
+            <PropertyRef Name="col_Version" />
+          </Key>
+          <Property Name="col_Version" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KUKModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaim">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KUKModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogin">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_BackGroundCheck_AspNetUsers">
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KUKModel.tbl_BackGroundCheck" Role="tbl_BackGroundCheck" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_BackGroundCheck">
+              <PropertyRef Name="col_UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_BusinessDirectory_AspNetUsers">
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KUKModel.tbl_BusinessDirectory" Role="tbl_BusinessDirectory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_BusinessDirectory">
+              <PropertyRef Name="col_PostedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_DeviceIds_AspNetUsers">
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KUKModel.tbl_DeviceIds" Role="tbl_DeviceIds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_DeviceIds">
+              <PropertyRef Name="col_UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Jobs_AspNetUsers">
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KUKModel.tbl_Jobs" Role="tbl_Jobs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_Jobs">
+              <PropertyRef Name="col_PostedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_PartyStatus_AspNetUsers">
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KUKModel.tbl_PartyStatus" Role="tbl_PartyStatus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_PartyStatus">
+              <PropertyRef Name="col_UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Photo_AspNetUsers">
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KUKModel.tbl_Photo" Role="tbl_Photo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_Photo">
+              <PropertyRef Name="col_UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Rating_AspNetUsers">
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KUKModel.tbl_Rating" Role="tbl_Rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_Rating">
+              <PropertyRef Name="col_UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Requirements_AspNetUsers">
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KUKModel.tbl_Requirements" Role="tbl_Requirements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_Requirements">
+              <PropertyRef Name="col_PostedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_UserAlbum_AspNetUsers">
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KUKModel.tbl_UserAlbum" Role="tbl_UserAlbum" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_UserAlbum">
+              <PropertyRef Name="col_UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_UserMessages_AspNetUsers">
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="KUKModel.tbl_UserMessages" Role="tbl_UserMessages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_UserMessages">
+              <PropertyRef Name="col_ToUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_City_tbl_State">
+          <End Type="KUKModel.tbl_State" Role="tbl_State" Multiplicity="1" />
+          <End Type="KUKModel.tbl_City" Role="tbl_City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_State">
+              <PropertyRef Name="col_StateID" />
+            </Principal>
+            <Dependent Role="tbl_City">
+              <PropertyRef Name="col_StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Type="KUKModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+          <End Type="KUKModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+        </Association>
+        <EntityType Name="tbl_Purchase">
+          <Key>
+            <PropertyRef Name="col_PurchaseID" />
+          </Key>
+          <Property Name="col_PurchaseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="col_UserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="col_PurchaseStatus" Type="Boolean" Nullable="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KUKModelStoreContainer" CdmEntityContainer="KUKEntities">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="KUKModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="KUKModel.AspNetRole">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="KUKModel.AspNetUserClaim">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="KUKModel.AspNetUserLogin">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="KUKModel.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="ProfileLink" ColumnName="ProfileLink" />
+                <ScalarProperty Name="Profession" ColumnName="Profession" />
+                <ScalarProperty Name="ShowLocation" ColumnName="ShowLocation" />
+                <ScalarProperty Name="PhoneVisible" ColumnName="PhoneVisible" />
+                <ScalarProperty Name="School" ColumnName="School" />
+                <ScalarProperty Name="LocationTime" ColumnName="LocationTime" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="House" ColumnName="House" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+                <ScalarProperty Name="Posting" ColumnName="Posting" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="LeavingYear" ColumnName="LeavingYear" />
+                <ScalarProperty Name="JoiningYear" ColumnName="JoiningYear" />
+                <ScalarProperty Name="RollNo" ColumnName="RollNo" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsersRegistrings">
+            <EntityTypeMapping TypeName="KUKModel.AspNetUsersRegistring">
+              <MappingFragment StoreEntitySet="AspNetUsersRegistring">
+                <ScalarProperty Name="ProfileLink" ColumnName="ProfileLink" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="ConfirmPassword" ColumnName="ConfirmPassword" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="School" ColumnName="School" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="House" ColumnName="House" />
+                <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+                <ScalarProperty Name="Posting" ColumnName="Posting" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="LeavingYear" ColumnName="LeavingYear" />
+                <ScalarProperty Name="JoiningYear" ColumnName="JoiningYear" />
+                <ScalarProperty Name="RollNo" ColumnName="RollNo" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Alerts">
+            <EntityTypeMapping TypeName="KUKModel.tbl_Alerts">
+              <MappingFragment StoreEntitySet="tbl_Alerts">
+                <ScalarProperty Name="col_Read" ColumnName="col_Read" />
+                <ScalarProperty Name="col_AlertDateTime" ColumnName="col_AlertDateTime" />
+                <ScalarProperty Name="col_Alert" ColumnName="col_Alert" />
+                <ScalarProperty Name="col_AlertID" ColumnName="col_AlertID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_BackGroundCheck">
+            <EntityTypeMapping TypeName="KUKModel.tbl_BackGroundCheck">
+              <MappingFragment StoreEntitySet="tbl_BackGroundCheck">
+                <ScalarProperty Name="col_UserID" ColumnName="col_UserID" />
+                <ScalarProperty Name="col_OverAllRating" ColumnName="col_OverAllRating" />
+                <ScalarProperty Name="col_Comments" ColumnName="col_Comments" />
+                <ScalarProperty Name="col_BackgroundCheckID" ColumnName="col_BackgroundCheckID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_BusinessDirectory">
+            <EntityTypeMapping TypeName="KUKModel.tbl_BusinessDirectory">
+              <MappingFragment StoreEntitySet="tbl_BusinessDirectory">
+                <ScalarProperty Name="col_BusinessEmail" ColumnName="col_BusinessEmail" />
+                <ScalarProperty Name="col_BusinessContact" ColumnName="col_BusinessContact" />
+                <ScalarProperty Name="col_PostedBy" ColumnName="col_PostedBy" />
+                <ScalarProperty Name="col_BusinessDescription" ColumnName="col_BusinessDescription" />
+                <ScalarProperty Name="col_BusinessAddress" ColumnName="col_BusinessAddress" />
+                <ScalarProperty Name="col_BusinessCategory" ColumnName="col_BusinessCategory" />
+                <ScalarProperty Name="col_BusinessName" ColumnName="col_BusinessName" />
+                <ScalarProperty Name="col_BusinessID" ColumnName="col_BusinessID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_City">
+            <EntityTypeMapping TypeName="KUKModel.tbl_City">
+              <MappingFragment StoreEntitySet="tbl_City">
+                <ScalarProperty Name="col_StateID" ColumnName="col_StateID" />
+                <ScalarProperty Name="col_CityCode" ColumnName="col_CityCode" />
+                <ScalarProperty Name="col_CityName" ColumnName="col_CityName" />
+                <ScalarProperty Name="col_CityID" ColumnName="col_CityID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_DeviceIds">
+            <EntityTypeMapping TypeName="KUKModel.tbl_DeviceIds">
+              <MappingFragment StoreEntitySet="tbl_DeviceIds">
+                <ScalarProperty Name="col_Version" ColumnName="col_Version" />
+                <ScalarProperty Name="col_DateTime" ColumnName="col_DateTime" />
+                <ScalarProperty Name="col_UserType" ColumnName="col_UserType" />
+                <ScalarProperty Name="col_DeviceToken" ColumnName="col_DeviceToken" />
+                <ScalarProperty Name="col_UserID" ColumnName="col_UserID" />
+                <ScalarProperty Name="col_DeviceTokenID" ColumnName="col_DeviceTokenID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Jobs">
+            <EntityTypeMapping TypeName="KUKModel.tbl_Jobs">
+              <MappingFragment StoreEntitySet="tbl_Jobs">
+                <ScalarProperty Name="col_PostedBy" ColumnName="col_PostedBy" />
+                <ScalarProperty Name="col_ContactEmail" ColumnName="col_ContactEmail" />
+                <ScalarProperty Name="col_ContactNumber" ColumnName="col_ContactNumber" />
+                <ScalarProperty Name="col_Category" ColumnName="col_Category" />
+                <ScalarProperty Name="col_Expired" ColumnName="col_Expired" />
+                <ScalarProperty Name="col_PostDateTime" ColumnName="col_PostDateTime" />
+                <ScalarProperty Name="col_JobDescription" ColumnName="col_JobDescription" />
+                <ScalarProperty Name="col_JobTitle" ColumnName="col_JobTitle" />
+                <ScalarProperty Name="col_JobID" ColumnName="col_JobID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Log">
+            <EntityTypeMapping TypeName="KUKModel.tbl_Log">
+              <MappingFragment StoreEntitySet="tbl_Log">
+                <ScalarProperty Name="col_Feature" ColumnName="col_Feature" />
+                <ScalarProperty Name="col_DateTime" ColumnName="col_DateTime" />
+                <ScalarProperty Name="col_UserID" ColumnName="col_UserID" />
+                <ScalarProperty Name="col_LogID" ColumnName="col_LogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_News">
+            <EntityTypeMapping TypeName="KUKModel.tbl_News">
+              <MappingFragment StoreEntitySet="tbl_News">
+                <ScalarProperty Name="col_NewsDateTime" ColumnName="col_NewsDateTime" />
+                <ScalarProperty Name="col_News" ColumnName="col_News" />
+                <ScalarProperty Name="col_NewsID" ColumnName="col_NewsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_PartyStatus">
+            <EntityTypeMapping TypeName="KUKModel.tbl_PartyStatus">
+              <MappingFragment StoreEntitySet="tbl_PartyStatus">
+                <ScalarProperty Name="col_UserID" ColumnName="col_UserID" />
+                <ScalarProperty Name="col_Date" ColumnName="col_Date" />
+                <ScalarProperty Name="col_IsAvailable" ColumnName="col_IsAvailable" />
+                <ScalarProperty Name="col_PartyStatusID" ColumnName="col_PartyStatusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Photo">
+            <EntityTypeMapping TypeName="KUKModel.tbl_Photo">
+              <MappingFragment StoreEntitySet="tbl_Photo">
+                <ScalarProperty Name="col_BigPhoto" ColumnName="col_BigPhoto" />
+                <ScalarProperty Name="col_UserId" ColumnName="col_UserId" />
+                <ScalarProperty Name="col_Photo" ColumnName="col_Photo" />
+                <ScalarProperty Name="col_PhotoID" ColumnName="col_PhotoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Profession">
+            <EntityTypeMapping TypeName="KUKModel.tbl_Profession">
+              <MappingFragment StoreEntitySet="tbl_Profession">
+                <ScalarProperty Name="col_Profession" ColumnName="col_Profession" />
+                <ScalarProperty Name="col_ProfessionID" ColumnName="col_ProfessionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Rating">
+            <EntityTypeMapping TypeName="KUKModel.tbl_Rating">
+              <MappingFragment StoreEntitySet="tbl_Rating">
+                <ScalarProperty Name="col_Rating" ColumnName="col_Rating" />
+                <ScalarProperty Name="col_UserID" ColumnName="col_UserID" />
+                <ScalarProperty Name="col_RatingID" ColumnName="col_RatingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Requirements">
+            <EntityTypeMapping TypeName="KUKModel.tbl_Requirements">
+              <MappingFragment StoreEntitySet="tbl_Requirements">
+                <ScalarProperty Name="col_RequirementPostedDate" ColumnName="col_RequirementPostedDate" />
+                <ScalarProperty Name="col_PostedBy" ColumnName="col_PostedBy" />
+                <ScalarProperty Name="col_RequirementEmail" ColumnName="col_RequirementEmail" />
+                <ScalarProperty Name="col_RequirementContact" ColumnName="col_RequirementContact" />
+                <ScalarProperty Name="col_RequirementDescription" ColumnName="col_RequirementDescription" />
+                <ScalarProperty Name="col_RequirementCategory" ColumnName="col_RequirementCategory" />
+                <ScalarProperty Name="col_RequirementID" ColumnName="col_RequirementID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_State">
+            <EntityTypeMapping TypeName="KUKModel.tbl_State">
+              <MappingFragment StoreEntitySet="tbl_State">
+                <ScalarProperty Name="col_StateCode" ColumnName="col_StateCode" />
+                <ScalarProperty Name="col_StateName" ColumnName="col_StateName" />
+                <ScalarProperty Name="col_StateID" ColumnName="col_StateID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_UserAlbum">
+            <EntityTypeMapping TypeName="KUKModel.tbl_UserAlbum">
+              <MappingFragment StoreEntitySet="tbl_UserAlbum">
+                <ScalarProperty Name="col_PostedDateTime" ColumnName="col_PostedDateTime" />
+                <ScalarProperty Name="col_Description" ColumnName="col_Description" />
+                <ScalarProperty Name="col_BigPhoto" ColumnName="col_BigPhoto" />
+                <ScalarProperty Name="col_UserId" ColumnName="col_UserId" />
+                <ScalarProperty Name="col_Photo" ColumnName="col_Photo" />
+                <ScalarProperty Name="col_UserAlbumID" ColumnName="col_UserAlbumID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_UserMessages">
+            <EntityTypeMapping TypeName="KUKModel.tbl_UserMessages">
+              <MappingFragment StoreEntitySet="tbl_UserMessages">
+                <ScalarProperty Name="col_FromUserID" ColumnName="col_FromUserID" />
+                <ScalarProperty Name="col_ToUserID" ColumnName="col_ToUserID" />
+                <ScalarProperty Name="col_ParentMessageID" ColumnName="col_ParentMessageID" />
+                <ScalarProperty Name="col_DateTime" ColumnName="col_DateTime" />
+                <ScalarProperty Name="col_Message" ColumnName="col_Message" />
+                <ScalarProperty Name="col_userMessagesID" ColumnName="col_userMessagesID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Version">
+            <EntityTypeMapping TypeName="KUKModel.tbl_Version">
+              <MappingFragment StoreEntitySet="tbl_Version">
+                <ScalarProperty Name="col_Version" ColumnName="col_Version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="KUKModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetUser">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="AspNetRole">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="tbl_Purchase">
+            <EntityTypeMapping TypeName="KUKModel.tbl_Purchase">
+              <MappingFragment StoreEntitySet="tbl_Purchase">
+                <ScalarProperty Name="col_PurchaseStatus" ColumnName="col_PurchaseStatus" />
+                <ScalarProperty Name="col_UserID" ColumnName="col_UserID" />
+                <ScalarProperty Name="col_PurchaseID" ColumnName="col_PurchaseID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

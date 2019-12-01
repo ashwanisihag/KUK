@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="1dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/user_rank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/whorlview_material_red"
+                android:text=""
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user_institute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Institute"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/user_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Name"
+                    android:textStyle="bold" />
+
+               <!-- <TextView
+                    android:id="@+id/user_RollNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Roll No" />-->
+
+                <TextView
+                    android:id="@+id/user_batch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Batch" />
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Touch for more details"
+                    android:textColor="@android:color/holo_red_dark" />
+                android:layout_marginTop="5dp"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/mdtp_red" />
+
+</LinearLayout>

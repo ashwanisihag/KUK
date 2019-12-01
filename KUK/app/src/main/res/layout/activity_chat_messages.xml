@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activity.ChatMessagesActivity">
+<!--    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Room"
+        android:textColor="#FFFFFF"
+        android:id="@+id/btn_delete"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/rounded_chat_button"
+        android:layout_alignParentEnd="true" />-->
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:id="@+id/msg_input"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btn_send"
+        android:background="@drawable/rounded_edittext"
+        android:layout_toStartOf="@+id/btn_send" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:textColor="#FFFFFF"
+        android:id="@+id/btn_send"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/rounded_chat_button"
+        android:layout_alignParentEnd="true" />
+    <ImageButton
+        android:id="@+id/imageBtn"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:drawable/ic_menu_gallery"
+        android:visibility="gone"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:background="@color/mdtp_red" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_chat_messages"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="40dp"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+</RelativeLayout>
+
+

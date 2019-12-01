@@ -1,0 +1,157 @@
+<resources>
+    <string name="app_name">Kukians Alumni</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="house_color">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Pink</item>
+        <item>Purple</item>
+        <item>Brown</item>
+        <item>White</item>
+        <item>Black</item>
+    </string-array>
+    <string-array name="business_category_search">
+        <item>All Categories</item>
+        <item>Management</item>
+        <item>Business and Financial Operations</item>
+        <item>Computer and Mathematical</item>
+        <item>Architecture and Engineering</item>
+        <item>Life, Physical, and Social Science</item>
+        <item>Community and Social Service</item>
+        <item>Legal</item>
+        <item>Education, Training, and Library</item>
+        <item>Arts, Design, Entertainment, Sports, and Media</item>
+        <item>Healthcare Practitioners and Technical</item>
+        <item>Healthcare Support</item>
+        <item>Protective Service</item>
+        <item>Food Preparation and Serving Related</item>
+        <item>Building and Grounds Cleaning and Maintenance</item>
+        <item>Personal Care and Service</item>
+        <item>Sales and Related</item>
+        <item>Office and Administrative Support</item>
+        <item>Farming, Fishing, and Forestry</item>
+        <item>Construction and Extraction</item>
+        <item>Installation, Maintenance, and Repair</item>
+        <item>Production</item>
+        <item>Transportation and Material Moving</item>
+    </string-array>
+    <string-array name="business_category">
+        <item>Management</item>
+        <item>Business and Financial Operations</item>
+        <item>Computer and Mathematical</item>
+        <item>Architecture and Engineering</item>
+        <item>Life, Physical, and Social Science</item>
+        <item>Community and Social Service</item>
+        <item>Legal</item>
+        <item>Education, Training, and Library</item>
+        <item>Arts, Design, Entertainment, Sports, and Media</item>
+        <item>Healthcare Practitioners and Technical</item>
+        <item>Healthcare Support</item>
+        <item>Protective Service</item>
+        <item>Food Preparation and Serving Related</item>
+        <item>Building and Grounds Cleaning and Maintenance</item>
+        <item>Personal Care and Service</item>
+        <item>Sales and Related</item>
+        <item>Office and Administrative Support</item>
+        <item>Farming, Fishing, and Forestry</item>
+        <item>Construction and Extraction</item>
+        <item>Installation, Maintenance, and Repair</item>
+        <item>Production</item>
+        <item>Transportation and Material Moving</item>
+    </string-array>
+    <string-array name="school_list_search">
+        <item>All Departments</item>
+        <item>Physics</item>
+        <item>Department of Instrumentation</item>
+        <item>Chemistry</item>
+        <item>Mathematics</item>
+        <item>Statistics_Operational</item>
+        <item>Geophysics</item>
+        <item>Electronic Science</item>
+        <item>Geography</item>
+        <item>Geology</item>
+        <item>Civil Engg</item>
+        <item>Mechanical Engg</item>
+        <item>Electrical Engg</item>
+        <item>E-C Engg</item>
+        <item>Foreign Students</item>
+    </string-array>
+    <string-array name="school_list_registration">
+        <item>Select Department</item>
+        <item>Physics</item>
+        <item>Department of Instrumentation</item>
+        <item>Chemistry</item>
+        <item>Mathematics</item>
+        <item>Statistics_Operational</item>
+        <item>Geophysics</item>
+        <item>Electronic Science</item>
+        <item>Geography</item>
+        <item>Geology</item>
+        <item>Civil Engg</item>
+        <item>Mechanical Engg</item>
+        <item>Electrical Engg</item>
+        <item>E-C Engg</item>
+        <item>Foreign Students</item>
+    </string-array>
+    <string-array name="india_states">
+        <item>Andaman and Nicobar Islands</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chandigarh</item>
+        <item>Chhattisgarh</item>
+        <item>Dadra and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Delhi</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Lakshadweep</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Orissa</item>
+        <item>Pondicherry</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttaranchal</item>
+        <item>Uttar Pradesh</item>
+        <item>West Bengal</item>
+    </string-array>
+    <string-array name="blood_group">
+        <item>O−</item>
+        <item>O+</item>
+        <item>A−</item>
+        <item>A+</item>
+        <item>B−</item>
+        <item>B+</item>
+        <item>AB−</item>
+        <item>AB+</item>
+    </string-array>
+
+    <!--    <string name="subscription_period_prompt">Select your subscription period</string>
+        <string name="subscription_resignup_prompt">To reactivate your subscription, select your subscription period</string>
+        <string name="subscription_update_prompt">To change your subscription, select your new subscription period</string>
+        <string name="subscription_period_monthly">Monthly</string>
+        <string name="subscription_period_yearly">Yearly</string>
+        <string name="subscription_prompt_continue">Continue</string>
+        <string name="subscription_prompt_cancel">Cancel</string>-->
+    <string name="content_description_app_loading_image">App loading image</string>
+    <!--<string name="content_desc_free_vs_premium_indicator">Free or Premium Image Indicator</string>-->
+</resources>

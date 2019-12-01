@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_chat_message"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_chat_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:gravity="left">
+
+
+            <TextView
+                android:id="@+id/txt_chat_from"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textAllCaps="true"
+                android:textIsSelectable="true"
+                android:textColor="@color/whorlview_material_blue"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/txt_chat_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="240dp"
+                android:background="@drawable/white_chat_bkg"
+                android:padding="8dp"
+                android:textSize="15dp"
+                android:textIsSelectable="true"
+                android:textColor="#000000"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="8dp" />
+            <TextView
+                android:id="@+id/txt_chat_time"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/mdtp_red"/>
+
+</LinearLayout>

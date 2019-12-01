@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.AboutUsActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="App Version: 1.0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:text="For any suggestions or bugs contact at" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="email"
+        android:text="ashwanisihag@yahoo.com" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textIsSelectable="true"
+        android:autoLink="phone"
+        android:text="+919876301824" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Ashwani Sihag" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Batch 2006" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Kurukshetra University" />
+
+
+                    <EditText
+                        android:id="@+id/ms_admin_Message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:hint="Youer feedback *"
+                        android:textColor="#333"
+                        android:inputType="textMultiLine"
+                        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_admin_Send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="feebackToAdmin"
+        android:text="Send" />
+
+</LinearLayout>

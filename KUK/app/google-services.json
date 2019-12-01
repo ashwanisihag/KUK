@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "1026228533048",
+    "firebase_url": "https://divine-bruin-219607.firebaseio.com",
+    "project_id": "divine-bruin-219607",
+    "storage_bucket": "divine-bruin-219607.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026228533048:android:27c3846483cb87e6",
+        "android_client_info": {
+          "package_name": "com.track24x7.kuk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026228533048-22el311oqmem7jnd28dsfvkdvgljvjj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDinBNtPspfOhjYY5Ife0u3wdO5-CHRoSQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026228533048:android:922b17f235de727b",
+        "android_client_info": {
+          "package_name": "com.track24x7.ssk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026228533048-22el311oqmem7jnd28dsfvkdvgljvjj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDinBNtPspfOhjYY5Ife0u3wdO5-CHRoSQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

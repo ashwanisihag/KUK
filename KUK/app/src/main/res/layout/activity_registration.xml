@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.RegistrationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/cv_registration_profile_pic"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_default_profile_pic" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Department*"/>
+
+
+                    <Spinner
+                        android:id="@+id/registration_spinner_institute"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/school_list_registration"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"></Spinner>
+
+                </LinearLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_image="@null"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="User Name *"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="First Name *"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Last Name *"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="Date of Birth *"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone Number *"
+                        android:inputType="phone"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="City"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="State"/>
+
+
+                    <Spinner
+                        android:id="@+id/registration_spinner_state"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:entries="@array/india_states"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"></Spinner>
+
+                </LinearLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_postal_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Postal Code"
+                        android:inputType="number"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Blood Group"/>
+
+
+                    <Spinner
+                        android:id="@+id/registration_spinner_blood_group"
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:entries="@array/blood_group"></Spinner>
+                </LinearLayout>
+              <!--  <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_roll_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Roll No *"
+                        android:inputType="number"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>-->
+            <!--    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="House" />
+
+                    <Spinner
+                        android:id="@+id/registration_spinner_house"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/house_color"
+                        android:layout_marginLeft="15dp"></Spinner>
+
+                </LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Joining Year"/>
+
+
+                    <Spinner
+                        android:id="@+id/registration_spinner_joining_year"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"></Spinner>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Leaving Year"/>
+
+
+                    <Spinner
+                        android:id="@+id/registration_spinner_leaving_year"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"></Spinner>
+
+                </LinearLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_designation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Designation"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_posting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Posting"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="7dp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Profession" />
+
+                    <Spinner
+                        android:id="@+id/registration_spinner_Professions"
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/business_category"
+                        android:layout_marginLeft="15dp"></Spinner>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        app:mtf_labelColor="#666">
+
+                        <EditText
+                            android:id="@+id/registration_department"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Department"
+                            android:textColor="#333"
+                            android:textSize="15sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        app:mtf_labelColor="#666">
+
+                        <EditText
+                            android:id="@+id/registration_profileLink"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Linkedin/FB Profile Link"
+                            android:textColor="#333"
+                            android:textSize="15sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp">
+                    <CheckBox android:id="@+id/registration_checkbox_phoneVisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Visible"
+                        />
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp">
+                    <CheckBox android:id="@+id/registration_checkbox_locationVisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location Visible"
+                        />
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Password should be minimum 6 characters in length."/>
+
+                </FrameLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password *"
+                        android:inputType="textPassword"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:id="@+id/registration_confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Confirm Password *"
+                        android:inputType="textPassword"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register" />
+
+
+</LinearLayout>

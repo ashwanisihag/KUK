@@ -1,0 +1,93 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="example.javatpoint.com.optionmenu.BirthdayActivity">
+    <item  android:id="@+id/nav_get_full_version"
+        android:title="Get Full Version"/>
+  <!--  <item  android:id="@+id/nav_party"
+        android:title="Get Together"/>
+    <item  android:id="@+id/nav_online"
+        android:title="Online Kukians"/>-->
+    <item  android:id="@+id/nav_home"
+        android:title="Batchmates"/>
+    <!-- <item  android:id="@+id/nav_upload_photos"
+         android:title="Upload Photos"/>
+     <item  android:id="@+id/nav_download_photos"
+         android:title="Dowload Photos"/>-->
+    <!--<item  android:id="@+id/nav_view_photos"
+        android:icon="@drawable/ic_arrow_up"
+        android:title="View Photos"/>
+    <item  android:id="@+id/nav_upload_photos"
+        android:title="Upload Photos"/>-->
+   <!-- <item  android:id="@+id/nav_chat"
+        android:title="Chat"/>-->
+    <item  android:id="@+id/nav_my_messages"
+        android:title="Inbox"/>
+    <item  android:id="@+id/nav_search_Kukians"
+        android:title="Search"/>
+    <item android:id="@+id/NearBy"
+        android:title="Near by">
+        <menu>
+            <item  android:id="@+id/nav_nearby_Kukians"
+                android:title="Near By Kukians"/>
+            <item  android:id="@+id/nav_nearby_batchmates"
+                android:title="Near By Batchmates"/>
+            <item  android:id="@+id/nav_nearby_schoolmates"
+                android:title="Near By Same Dept"/>
+        </menu>
+    </item>
+    <item android:id="@+id/Jobs"
+        android:title="Jobs">
+        <menu>
+            <item  android:id="@+id/nav_post_jobs"
+                android:title="Post Jobs"/>
+            <item  android:id="@+id/nav_posted_jobs"
+                android:title="Posted Jobs"/>
+            <item  android:id="@+id/nav_my_posted_jobs"
+                android:title="My Posted Jobs"/>
+        </menu>
+    </item>
+    <item android:id="@+id/Requirements"
+        android:title="Requirements">
+        <menu>
+            <item  android:id="@+id/nav_post_Requirements"
+                android:title="Post Requirements"/>
+            <item  android:id="@+id/nav_posted_Requirements"
+                android:title="Posted Requirements"/>
+            <item  android:id="@+id/nav_my_posted_Requirements"
+                android:title="My Posted Requirements"/>
+        </menu>
+    </item>
+    <item android:id="@+id/Business"
+        android:title="Business Postings">
+        <menu>
+            <item  android:id="@+id/nav_post_business"
+                android:title="Post Business"/>
+            <item  android:id="@+id/nav_posted_business"
+                android:title="Posted Business"/>
+            <item  android:id="@+id/nav_my_posted_business"
+                android:title="My Posted Business"/>
+        </menu>
+    </item>
+    <!-- <item  android:id="@+id/nav_birthdays"
+         android:title="Birthdays"/>-->
+    <item android:id="@+id/News"
+        android:title="News">
+        <menu>
+            <item  android:id="@+id/nav_post_news"
+                android:title="Post News"/>
+            <item  android:id="@+id/nav_news"
+                android:title="News"/>
+        </menu>
+    </item>
+    <item  android:id="@+id/nav_update_user"
+        android:title="Update Your Details"/>
+    <item  android:id="@+id/nav_share"
+        android:title="Share"/>
+    android:title="Share"/>
+    <item  android:id="@+id/nav_about"
+        android:title="About Us"/>
+    <item  android:id="@+id/nav_logout"
+        android:title="Logout"/>
+
+</menu>

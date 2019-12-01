@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SearchActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="left"
+            android:gravity="left">
+
+
+            <Spinner
+                android:id="@+id/se_spinner_institute"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/school_list_search"
+                android:layout_marginLeft="15dp"></Spinner>
+
+            <EditText
+                android:id="@+id/se_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:inputType="text"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/se_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:inputType="text"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+
+           <!-- <EditText
+                android:id="@+id/se_roll_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Roll No"
+                android:inputType="number"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />-->
+
+            <Spinner
+                android:id="@+id/se_spinner_Batch"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/se_spinner_Professions"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/business_category_search">
+            </Spinner>
+
+            <EditText
+                android:id="@+id/se_department"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Department"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/se_designation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Designation"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#333"
+                android:textSize="15sp" />
+            <Spinner
+                android:id="@+id/se_spinner_city"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"></Spinner>
+            <Button
+                android:id="@+id/se_btn_search"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+</LinearLayout>

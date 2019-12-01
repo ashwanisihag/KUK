@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0969188cbc394f82a9b5dd9458ec3d12" Name="Diagram1">
+        <EntityTypeShape EntityType="KUKModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="KUKModel.AspNetRole" Width="1.5" PointX="0.75" PointY="19.375" />
+        <EntityTypeShape EntityType="KUKModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="27.25" />
+        <EntityTypeShape EntityType="KUKModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="35.875" />
+        <EntityTypeShape EntityType="KUKModel.AspNetUser" Width="1.5" PointX="3" PointY="15" />
+        <EntityTypeShape EntityType="KUKModel.AspNetUsersRegistring" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="KUKModel.tbl_Alerts" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="KUKModel.tbl_BackGroundCheck" Width="1.5" PointX="5.25" PointY="9" />
+        <EntityTypeShape EntityType="KUKModel.tbl_BusinessDirectory" Width="1.5" PointX="5.25" PointY="17.375" />
+        <EntityTypeShape EntityType="KUKModel.tbl_City" Width="1.5" PointX="10" PointY="0.875" />
+        <EntityTypeShape EntityType="KUKModel.tbl_DeviceIds" Width="1.5" PointX="5.25" PointY="32.75" />
+        <EntityTypeShape EntityType="KUKModel.tbl_Jobs" Width="1.5" PointX="5.25" PointY="5.25" />
+        <EntityTypeShape EntityType="KUKModel.tbl_Log" Width="1.5" PointX="7.75" PointY="6.75" />
+        <EntityTypeShape EntityType="KUKModel.tbl_News" Width="1.5" PointX="9.75" PointY="3.75" />
+        <EntityTypeShape EntityType="KUKModel.tbl_PartyStatus" Width="1.5" PointX="5.25" PointY="2.625" />
+        <EntityTypeShape EntityType="KUKModel.tbl_Photo" Width="1.5" PointX="5.25" PointY="30" />
+        <EntityTypeShape EntityType="KUKModel.tbl_Profession" Width="1.5" PointX="9.75" PointY="6.75" />
+        <EntityTypeShape EntityType="KUKModel.tbl_Rating" Width="1.5" PointX="5.25" PointY="14.875" />
+        <EntityTypeShape EntityType="KUKModel.tbl_Requirements" Width="1.5" PointX="5.25" PointY="20.875" />
+        <EntityTypeShape EntityType="KUKModel.tbl_State" Width="1.5" PointX="7.75" PointY="1" />
+        <EntityTypeShape EntityType="KUKModel.tbl_UserAlbum" Width="1.5" PointX="5.25" PointY="11.75" />
+        <EntityTypeShape EntityType="KUKModel.tbl_UserMessages" Width="1.5" PointX="5.25" PointY="24.25" />
+        <EntityTypeShape EntityType="KUKModel.tbl_Version" Width="1.5" PointX="7.75" PointY="9.75" />
+        <AssociationConnector Association="KUKModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="KUKModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="KUKModel.FK_tbl_BackGroundCheck_AspNetUsers" />
+        <AssociationConnector Association="KUKModel.FK_tbl_BusinessDirectory_AspNetUsers" />
+        <AssociationConnector Association="KUKModel.FK_tbl_DeviceIds_AspNetUsers" />
+        <AssociationConnector Association="KUKModel.FK_tbl_Jobs_AspNetUsers" />
+        <AssociationConnector Association="KUKModel.FK_tbl_PartyStatus_AspNetUsers" />
+        <AssociationConnector Association="KUKModel.FK_tbl_Photo_AspNetUsers" />
+        <AssociationConnector Association="KUKModel.FK_tbl_Rating_AspNetUsers" />
+        <AssociationConnector Association="KUKModel.FK_tbl_Requirements_AspNetUsers" />
+        <AssociationConnector Association="KUKModel.FK_tbl_UserAlbum_AspNetUsers" />
+        <AssociationConnector Association="KUKModel.FK_tbl_UserMessages_AspNetUsers" />
+        <AssociationConnector Association="KUKModel.FK_tbl_City_tbl_State" />
+        <AssociationConnector Association="KUKModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="KUKModel.tbl_Purchase" Width="1.5" PointX="0.75" PointY="10.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
